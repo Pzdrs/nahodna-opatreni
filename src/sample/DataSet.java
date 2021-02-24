@@ -5,7 +5,7 @@ import com.google.gson.JsonArray;
 import java.util.Random;
 
 public class DataSet {
-    private String[] opatreni, authors;
+    private final String[] opatreni, authors;
 
     public DataSet(JsonArray opatreni, JsonArray authors) {
         this.opatreni = new String[opatreni.size()];
@@ -19,16 +19,8 @@ public class DataSet {
         }
     }
 
-    public String[] getOpatreni() {
-        return opatreni;
-    }
-
     public String getRandomOpatreni() {
         return this.opatreni[new Random().nextInt(this.opatreni.length)];
-    }
-
-    public String[] getAuthors() {
-        return authors;
     }
 
     public String getRandomAuthor() {
